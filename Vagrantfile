@@ -3,6 +3,10 @@
 
 Vagrant.configure("2") do |config|
 
+  config.vm.provider "virtualbox" do |v|
+    v.memory = 5120
+  end
+
   config.vm.box = "landregistry/centos"
 
   config.vm.define "ml" do |ml|
